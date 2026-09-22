@@ -1,25 +1,16 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
+import React from 'react';
+import Particles, { ParticlesProvider } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 const FireParticles = () => {
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
-  if (!init) {
-    return null;
-  }
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
+  };
 
   return (
-    <Particles
-      id="tsparticles"
+    <ParticlesProvider init={particlesInit}>
+      <Particles
+        id="tsparticles"
       options={{
         fullScreen: { enable: false, zIndex: 0 },
         fpsLimit: 120,
@@ -96,6 +87,7 @@ const FireParticles = () => {
         zIndex: 0
       }}
     />
+    </ParticlesProvider>
   );
 };
 
