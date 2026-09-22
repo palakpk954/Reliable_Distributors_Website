@@ -1,0 +1,11 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fire safety equipment illustration">
+  <rect width="500" height="400" fill="#f4f6f8"/>
+  <circle cx="250" cy="200" r="150" fill="#ffffff"/>
+  <!-- shield -->
+  <path d="M250 70 L 330 100 L 330 190 C 330 260 290 300 250 320 C 210 300 170 260 170 190 L 170 100 Z" fill="#d62828" stroke="#7d1010" stroke-width="3"/>
+  <path d="M250 95 L 305 116 L 305 188 C 305 244 275 276 250 292 C 225 276 195 244 195 188 L 195 116 Z" fill="#ffffff" opacity="0.12"/>
+  <!-- flame in shield -->
+  <path d="M250 150 C 235 175 235 195 250 210 C 265 195 265 175 250 150 Z" fill="#ffb703"/>
+  <path d="M250 170 C 244 182 244 194 250 202 C 256 194 256 182 250 170 Z" fill="#ffffff"/>
+  <text x="250" y="360" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2933" text-anchor="middle">Protecting What Matters</text>
+</svg>

@@ -1,0 +1,78 @@
+.service-box {
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Decorative top border */
+.service-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-crimson), var(--accent-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-box:hover::after {
+  transform: scaleX(1);
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-image-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--bg-white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  background: white;
+}
+
+.service-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-box:hover .service-image-container {
+  transform: scale(1.15) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(230, 48, 64, 0.4);
+  border-color: var(--primary-crimson);
+}
+
+.service-box:hover .service-illustration {
+  transform: scale(1.1);
+}
+
+.service-box h3 {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  transition: var(--transition);
+}
+
+.service-box p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="City skyline banner">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3541"/>
+      <stop offset="1" stop-color="#1f2933"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#sky)"/>
+  <g fill="#141a20">
+    <rect x="40" y="220" width="90" height="280"/>
+    <rect x="150" y="160" width="70" height="340"/>
+    <rect x="240" y="260" width="110" height="240"/>
+    <rect x="370" y="120" width="80" height="380"/>
+    <rect x="470" y="200" width="60" height="300"/>
+    <rect x="550" y="250" width="130" height="250"/>
+    <rect x="700" y="170" width="90" height="330"/>
+    <rect x="810" y="230" width="70" height="270"/>
+    <rect x="900" y="150" width="100" height="350"/>
+    <rect x="1020" y="240" width="80" height="260"/>
+    <rect x="1120" y="190" width="60" height="310"/>
+  </g>
+  <g fill="#ffb703" opacity="0.85">
+    <rect x="60" y="250" width="10" height="14"/>
+    <rect x="90" y="290" width="10" height="14"/>
+    <rect x="180" y="200" width="10" height="14"/>
+    <rect x="260" y="300" width="10" height="14"/>
+    <rect x="390" y="160" width="10" height="14"/>
+    <rect x="580" y="290" width="10" height="14"/>
+    <rect x="730" y="210" width="10" height="14"/>
+    <rect x="930" y="190" width="10" height="14"/>
+    <rect x="1040" y="280" width="10" height="14"/>
+  </g>
+</svg>
