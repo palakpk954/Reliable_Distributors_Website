@@ -8,15 +8,15 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const products = [
-    { category: 'Extinguishers', image: "/images/abc.svg", title: "ABC Fire Extinguisher", description: "Suitable for multiple fire types including electrical and solid fires (Class A, B, C)." },
-    { category: 'Extinguishers', image: "/images/co2.svg", title: "CO2 Fire Extinguisher", description: "Ideal for electrical fires and sensitive equipment. Leaves no residue (Class B, Electrical)." },
-    { category: 'Extinguishers', image: "/images/foam.svg", title: "Water & Foam Fire Extinguisher", description: "Perfect for flammable liquids like petrol and diesel, as well as solid combustibles (Class A, B)." },
-    { category: 'Extinguishers', image: "/images/abc.svg", title: "Clean Agent Fire Extinguisher", description: "Eco-friendly, leaves no residue, safe for sensitive electronic equipment." },
-    { category: 'Extinguishers', image: "/images/co2.svg", title: "Wet Chemical (Kitchen)", description: "Specially designed for Class F fires involving cooking oils and fats." },
-    { category: 'Extinguishers', image: "/images/foam.svg", title: "Automatic Modular Extinguisher", description: "Heat-activated modular units for server rooms and unmanned areas." },
-    { category: 'Alarms', image: "/images/fire-alarm.jpg", title: "Smoke & Heat Detectors", description: "Wireless networkable, photoelectric, and conventional heat detectors." },
-    { category: 'Alarms', image: "/images/fire-alarm.jpg", title: "Fire Alarm Systems", description: "Intelligent addressable fire detection and alarm systems." },
-    { category: 'Systems', image: "/images/fire-sprinkler.jpg", title: "Fire Fighting Systems", description: "Comprehensive range of fire sprinklers, hydrant valves, hose reels, and cabinets." }
+    { category: 'Extinguishers', image: "./images/abc.svg", title: "ABC Fire Extinguisher", description: "Suitable for multiple fire types including electrical and solid fires (Class A, B, C)." },
+    { category: 'Extinguishers', image: "./images/co2.svg", title: "CO2 Fire Extinguisher", description: "Ideal for electrical fires and sensitive equipment. Leaves no residue (Class B, Electrical)." },
+    { category: 'Extinguishers', image: "./images/foam.svg", title: "Water & Foam Fire Extinguisher", description: "Perfect for flammable liquids like petrol and diesel, as well as solid combustibles (Class A, B)." },
+    { category: 'Extinguishers', image: "./images/abc.svg", title: "Clean Agent Fire Extinguisher", description: "Eco-friendly, leaves no residue, safe for sensitive electronic equipment." },
+    { category: 'Extinguishers', image: "./images/co2.svg", title: "Wet Chemical (Kitchen)", description: "Specially designed for Class F fires involving cooking oils and fats." },
+    { category: 'Extinguishers', image: "./images/foam.svg", title: "Automatic Modular Extinguisher", description: "Heat-activated modular units for server rooms and unmanned areas." },
+    { category: 'Alarms', image: "./images/fire-alarm.jpg", title: "Smoke & Heat Detectors", description: "Wireless networkable, photoelectric, and conventional heat detectors." },
+    { category: 'Alarms', image: "./images/fire-alarm.jpg", title: "Fire Alarm Systems", description: "Intelligent addressable fire detection and alarm systems." },
+    { category: 'Systems', image: "./images/fire-sprinkler.jpg", title: "Fire Fighting Systems", description: "Comprehensive range of fire sprinklers, hydrant valves, hose reels, and cabinets." }
   ];
 
   const categories = ['All', 'Extinguishers', 'Alarms', 'Systems'];

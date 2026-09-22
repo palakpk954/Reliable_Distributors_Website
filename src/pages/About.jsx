@@ -31,7 +31,7 @@ const About = () => {
             
             <div className="about-image glass-panel" style={{ flex: '1 1 400px', padding: '1rem', borderRadius: 'var(--radius-lg)' }}>
               <div style={{ backgroundColor: 'var(--bg-light)', height: '400px', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                <img src="/images/about-us.jpg" alt="Fire Safety Professionals" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'var(--transition)' }} />
+                <img src="./images/about-us.jpg" alt="Fire Safety Professionals" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'var(--transition)' }} />
               </div>
             </div>
           </div>

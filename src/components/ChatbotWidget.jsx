@@ -32,7 +32,7 @@ const ChatbotWidget = () => {
       <div className={`chat-window ${isOpen ? 'open' : ''}`}>
         <div className="chat-header">
           <div className="header-info">
-            <img src="/images/mascot.jpg" alt="Sparky Mascot" className="chat-avatar" />
+            <img src="./images/mascot.jpg" alt="Sparky Mascot" className="chat-avatar" />
             <div>
               <h4>Sparky</h4>
               <span>Online</span>
@@ -62,7 +62,7 @@ const ChatbotWidget = () => {
 
       {/* Floating Button */}
       <button className={`chatbot-fab ${isOpen ? 'hidden' : ''}`} onClick={toggleChat}>
-        <img src="/images/mascot.jpg" alt="Chat with us" />
+        <img src="./images/mascot.jpg" alt="Chat with us" />
         <span className="fab-badge">1</span>
       </button>
     </div>

@@ -26,16 +26,16 @@ const Home = () => {
   };
 
   const services = [
-    { image: "/images/service_install.jpg", title: "Installation", description: "Professional installation of extinguishers, alarms, and hydrant systems." },
-    { image: "/images/service_refill.jpg", title: "Refilling & AMC", description: "Reliable refilling service with our Annual Maintenance Contracts." },
-    { image: "/images/service_maintenance.jpg", title: "Maintenance", description: "Regular inspection and servicing to ensure peak performance." },
-    { image: "/images/service_audit.jpg", title: "Safety Audits", description: "Comprehensive audits for regulatory compliance." }
+    { image: "./images/service_install.jpg", title: "Installation", description: "Professional installation of extinguishers, alarms, and hydrant systems." },
+    { image: "./images/service_refill.jpg", title: "Refilling & AMC", description: "Reliable refilling service with our Annual Maintenance Contracts." },
+    { image: "./images/service_maintenance.jpg", title: "Maintenance", description: "Regular inspection and servicing to ensure peak performance." },
+    { image: "./images/service_audit.jpg", title: "Safety Audits", description: "Comprehensive audits for regulatory compliance." }
   ];
 
   const products = [
-    { image: "/images/hero-banner.jpg", title: "Portable Fire Extinguishers", description: "Complete range including ABC, CO2, Clean Agent, Foam, and Wet Chemical types." },
-    { image: "/images/fire-alarm.jpg", title: "Smoke Detectors & Alarms", description: "Intelligent addressable systems and standalone wireless detectors." },
-    { image: "/images/fire-sprinkler.jpg", title: "Fire Fighting Systems", description: "High-quality fire sprinklers, hydrant valves, and hose reels." }
+    { image: "./images/hero-banner.jpg", title: "Portable Fire Extinguishers", description: "Complete range including ABC, CO2, Clean Agent, Foam, and Wet Chemical types." },
+    { image: "./images/fire-alarm.jpg", title: "Smoke Detectors & Alarms", description: "Intelligent addressable systems and standalone wireless detectors." },
+    { image: "./images/fire-sprinkler.jpg", title: "Fire Fighting Systems", description: "High-quality fire sprinklers, hydrant valves, and hose reels." }
   ];
 
   return (
@@ -57,7 +57,7 @@ const Home = () => {
             </div>
           </div>
           <div className="hero-image-wrapper animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <img src="/images/hero_illustration.jpg" alt="Firefighter Mascot" className="hero-3d-illustration" />
+            <img src="./images/hero_illustration.jpg" alt="Firefighter Mascot" className="hero-3d-illustration" />
           </div>
         </div>
       </section>

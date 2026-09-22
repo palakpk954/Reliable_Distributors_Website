@@ -41,7 +41,7 @@ const LeadModal = () => {
           <i className="fa-solid fa-xmark"></i>
         </button>
         <div className="modal-banner">
-          <img src="/images/mascot.jpg" alt="Firefighter Mascot" className="modal-mascot" />
+          <img src="./images/mascot.jpg" alt="Firefighter Mascot" className="modal-mascot" />
           <h2>Get a Free Fire Safety Consultation!</h2>
         </div>
         <p>Leave your details below and our experts will reach out to ensure your premises are 100% compliant and safe.</p>
