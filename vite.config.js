@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Reliable_Distributors_Website/',
+  base: './',
   plugins: [react()],
 })
