@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import FireParticles from '../components/FireParticles';
 import ServiceBox from '../components/ServiceBox';
 import ProductCard from '../components/ProductCard';
 import TestimonialSlider from '../components/TestimonialSlider';
@@ -41,45 +43,68 @@ const Home = () => {
   return (
     <>
       <section className="hero">
+        <FireParticles />
         <div className="container hero-split">
-          <div className="hero-content">
-            <h1 className="title-xl animate-fade-up">Reliable Fire <span className="text-gradient">Safety Solutions</span></h1>
-            <p className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <motion.div 
+            className="hero-content"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="title-xl">Reliable Fire <span className="text-gradient">Safety Solutions</span></h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Protecting lives and properties with premium fire extinguishers, expert installation, and 24/7 maintenance services.
-            </p>
-            <div className="hero-btns animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            </motion.p>
+            <motion.div 
+              className="hero-btns"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               <Link to="/services" className="btn btn-primary">
                 Our Services <i className="fa-solid fa-arrow-right"></i>
               </Link>
               <Link to="/contact" className="btn btn-outline">
                 Contact Us
               </Link>
-            </div>
-          </div>
-          <div className="hero-image-wrapper animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            className="hero-image-wrapper"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
             <img src="./images/hero_illustration.jpg" alt="Firefighter Mascot" className="hero-3d-illustration" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="section trust-section bg-dark">
         <div className="container">
           <div className="trust-grid">
-            <div className="trust-item animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              <div className="trust-icon"><i className="fa-solid fa-shield-halved"></i></div>
-              <h3>1000+ Audits</h3>
-              <p>Certified by top regulatory bodies across the nation.</p>
-            </div>
-            <div className="trust-item animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="trust-icon"><i className="fa-solid fa-truck-fast"></i></div>
-              <h3>24/7 Response</h3>
-              <p>Emergency fire safety support when you need it most.</p>
-            </div>
-            <div className="trust-item animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <div className="trust-icon"><i className="fa-solid fa-user-tie"></i></div>
-              <h3>Certified Experts</h3>
-              <p>Our team consists of highly trained fire safety professionals.</p>
-            </div>
+            {[
+              { icon: 'fa-shield-halved', title: '1000+ Audits', desc: 'Certified by top regulatory bodies across the nation.' },
+              { icon: 'fa-truck-fast', title: '24/7 Response', desc: 'Emergency fire safety support when you need it most.' },
+              { icon: 'fa-user-tie', title: 'Certified Experts', desc: 'Our team consists of highly trained fire safety professionals.' }
+            ].map((item, index) => (
+              <motion.div 
+                key={index}
+                className="trust-item"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="trust-icon"><i className={`fa-solid ${item.icon}`}></i></div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -127,7 +152,13 @@ const Home = () => {
           <h2>Need Fire Safety Equipment?</h2>
           <p>Request a quote and our team will contact you promptly.</p>
           
-          <div className="quote-form-container animate-fade-up">
+          <motion.div 
+            className="quote-form-container"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <form className="quote-form" onSubmit={handleQuoteSubmit}>
               <input type="text" name="name" className="input-field" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
               <input type="tel" name="phone" className="input-field" placeholder="Phone Number" required value={formData.phone} onChange={handleChange} />
@@ -135,7 +166,7 @@ const Home = () => {
               <textarea name="message" className="input-field" placeholder="Your Requirement" required value={formData.message} onChange={handleChange}></textarea>
               <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Get Quote Now</button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

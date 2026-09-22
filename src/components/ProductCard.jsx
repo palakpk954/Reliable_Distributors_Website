@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import './ProductCard.css';
 
@@ -11,7 +12,13 @@ const ProductCard = ({ title, description, image, delay }) => {
   };
 
   return (
-    <div className="product-card card animate-fade-up" style={{ animationDelay: `${delay}s` }}>
+    <motion.div 
+      className="product-card card"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay: delay }}
+    >
       <div className="product-img-wrapper">
         <img src={image} alt={title} className="product-image" />
       </div>
@@ -26,7 +33,7 @@ const ProductCard = ({ title, description, image, delay }) => {
           <i className="fa-solid fa-file-pdf"></i> Specs
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -29,10 +29,17 @@
   transform: perspective(1000px) rotateY(0deg) scale(1.02);
 }
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 .hero-3d-illustration {
   width: 100%;
   height: auto;
   display: block;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-content {
